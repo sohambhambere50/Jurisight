@@ -21,6 +21,6 @@ def extract_clauses(input_data, is_file=True):
     else:
         text = input_data
 
-    # clauses = [line.strip() for line in text.split("\n") if line.strip()]
-    # return clauses
-    return text.strip()
+    clauses = [line.strip() for line in text.split("\n") if line.strip()]
+    return clauses
+    # return text.strip()
