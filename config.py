@@ -1,5 +1,4 @@
 # config.py
-
 import os
 from dotenv import load_dotenv
 
@@ -21,7 +20,7 @@ class Config:
     MODEL_NAME = os.getenv("MODEL_NAME", "gpt-4")
 
     # Summarization settings
-    SUMMARY_MAX_TOKENS = 300
+    # SUMMARY_MAX_TOKENS = 300
 
     # RAG (if used later)
     VECTOR_DB_PATH = os.path.join(os.getcwd(), 'vector_store')
