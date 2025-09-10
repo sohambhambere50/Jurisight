@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Verification</title>
+</head>
+<body>
+    <h2>Email Verification</h2>
+    <p>A verification code has been sent to <strong>{{ email }}</strong>. Please enter it below:</p>
+
+    <form method="POST">
+        <input type="text" name="code" placeholder="Enter 6-digit code" required maxlength="6">
+        <button type="submit">Verify</button>
+    </form>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+</body>
+</html>

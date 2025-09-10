@@ -155,3 +155,729 @@ footer {
 .footer-nav a:hover {
     color: #fff;
 }
+
+/* --- Global Styles from Legal AI Page --- */
+body {
+    background-color: #0b0c11; /* Dark background from Legal AI */
+    color: #f0f0f0; /* Light text color from Legal AI */
+    font-family: Arial, sans-serif; /* Consistent font family */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Ensure full page height for the app container */
+    font-size: 0.9em;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent body scroll if content exceeds viewport */
+}
+
+
+/* --- Styles for the ChatGPT-like UI (adapted to Legal AI theme) --- */
+
+.app-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 260px;
+    background-color: #1a1a1a; /* Darker sidebar background from Legal AI */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-right: 1px solid #2e2e2e; /* Border for separation */
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #2e2e2e; /* Darker border */
+    margin-bottom: 10px;
+}
+
+.sidebar-toggle-btn {
+    font-size: 24px;
+    color: #f0f0f0; /* Light icon color */
+    cursor: pointer;
+}
+
+.app-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e0e0e0; /* Consistent app title color */
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.new-chat-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2a2a2a; /* Button background */
+    color: #f0f0f0;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.new-chat-btn:hover {
+    background-color: #3a3a3a;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #999; /* Lighter grey for inactive items */
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: #2a2a2a; /* Background on hover/active */
+    color: #f0f0f0; /* White text on hover/active */
+}
+
+.projects-section {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 10px; /* For scrollbar space */
+}
+
+.section-title {
+    font-size: 0.9em;
+    color: #777; /* Greyer for section titles */
+    margin-bottom: 10px;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+.new-tag {
+    background-color: #ffc107; /* PRO tag color from Legal AI */
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.7em;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.project-item {
+    color: #f0f0f0; /* Light text for project items */
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.project-item:hover {
+    background-color: #2a2a2a; /* Background on hover */
+}
+
+.sidebar-footer {
+    padding-top: 20px;
+    border-top: 1px solid #2e2e2e; /* Darker border */
+    margin-top: 10px;
+}
+
+.footer-item {
+    color: #999;
+    padding: 10px 15px;
+    font-size: 0.9em;
+}
+
+/* Main content and chat area styling */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212; /* Main content background from Legal AI */
+    padding: 20px; /* Padding for the entire main area */
+}
+
+.main-header {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #2e2e2e; /* Subtle header border */
+    margin-bottom: 20px;
+}
+
+.chat-title {
+    flex-grow: 1; /* Pushes other items to the right */
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.chat-title span {
+    color: #999;
+    font-size: 0.8em;
+    vertical-align: middle;
+}
+
+.upgrade-btn {
+    background-color: #7289da; /* Button color from Legal AI */
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+}
+
+.upgrade-btn:hover {
+    background-color: #677bc4;
+}
+
+.header-options span {
+    font-size: 24px;
+    cursor: pointer;
+    color: #f0f0f0; /* Light icons */
+}
+
+.chat-area-content {
+    flex-grow: 1;
+    padding-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+}
+
+.chat-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes content to the bottom */
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.chat-prompt {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    /* This margin will place the prompt directly above the input container */
+    margin-bottom: 10px; 
+}
+
+.input-container {
+    display: flex;
+    align-items: bottom;
+    width: 90%;
+    max-width: 600px;
+    background-color: #1a1a1a;
+    border: 1px solid #2e2e2e;
+    border-radius: 20px;
+    padding: 4px 12px;
+    position: relative;
+    /* Ensure the input container is at the bottom */
+    margin-top: auto; 
+}
+
+.chat-prompt {
+    font-size: 1.7rem;
+    font-weight: 200;
+    color: #f0f0f0;
+    margin-bottom: 0px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 700px; /* Wider input container */
+    background-color: #1a1a1a; /* Input background from Legal AI */
+    border: 1px solid #2e2e2e;
+    border-radius: 25px;
+    padding: 5px 15px;
+    position: relative; /* For potential future positioning */
+}
+
+.input-container input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    padding: 10px;
+}
+
+.input-container input::placeholder {
+    color: #777; /* Placeholder color from Legal AI */
+}
+
+.add-btn, .voice-btn, .send-btn {
+    background: transparent;
+    border: none;
+    color: #999; /* Icon color */
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 8px;
+    transition: color 0.3s;
+}
+
+.add-btn:hover, .voice-btn:hover, .send-btn:hover {
+    color: #f0f0f0; /* Lighter on hover */
+}
+
+/* --- JuriSight Authentication Pages --- */
+
+body {
+    background-color: #0b0c11; /* Dark background color */
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.welcome-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.form-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    text-decoration: none;
+    color: #777;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 8px 15px;
+    transition: color 0.3s;
+}
+
+.tab-btn.active {
+    color: #f0f0f0;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #999;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #2e2e2e;
+    color: #f0f0f0;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.form-group input::placeholder {
+    color: #555;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: #7289da;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.btn-primary:hover {
+    background-color: #677bc4;
+}
+
+.forgot-password {
+    display: block;
+    color: #7289da;
+    text-decoration: none;
+    font-size: 0.9em;
+    text-align: right;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #555;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #3e3e3e;
+}
+
+.divider:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .5em;
+}
+
+.btn-google {
+    background-color: #3a3a3a;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-google img {
+    width: 20px;
+}
+
+.btn-google:hover {
+    background-color: #4a4a4a;
+}
+
+.terms-text {
+    font-size: 0.8em;
+    color: #999;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.terms-text a {
+    color: #7289da;
+    text-decoration: none;
+}
+
+.terms-text a:hover {
+    text-decoration: underline;
+}
+
+/* Landing Page CSS */
+/* --- Global Styles --- */
+body {
+    background-color: #0b0c11;
+    color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Sidebar Styling --- */
+.sidebar {
+    width: 240px;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-right: 1px solid #2e2e2e;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    border-bottom: 1px solid #2e2e2e;
+    margin-bottom: 8px;
+}
+
+.sidebar-toggle-btn {
+    font-size: 20px;
+    color: #f0f0f0;
+    cursor: pointer;
+    display: none; /* Hidden by default on desktop */
+}
+
+.app-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 15px;
+}
+
+.new-chat-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.new-chat-btn:hover {
+    background-color: #3a3a3a;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #999;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.9em;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+}
+
+.projects-section {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.section-title {
+    font-size: 0.8em;
+    color: #777;
+    margin-bottom: 8px;
+    padding: 0 12px;
+    font-weight: bold;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.project-item {
+    color: #f0f0f0;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+}
+
+.project-item:hover {
+    background-color: #2a2a2a;
+}
+
+.project-item.active {
+    background-color: #2e2e2e;
+}
+
+.sidebar-footer {
+    padding-top: 15px;
+    border-top: 1px solid #2e2e2e;
+    margin-top: 8px;
+}
+
+.footer-item {
+    color: #999;
+    padding: 8px 12px;
+    font-size: 0.8em;
+}
+
+/* --- Main Content and Chat Area Styling --- */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    padding: 15px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 0;
+    border-bottom: 1px solid #2e2e2e;
+    margin-bottom: 15px;
+}
+
+.chat-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.upgrade-btn {
+    background-color: #7289da;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: bold;
+    font-size: 0.8em;
+    transition: background-color 0.3s;
+}
+
+.upgrade-btn:hover {
+    background-color: #677bc4;
+}
+
+.header-options span {
+    font-size: 20px;
+    cursor: pointer;
+    color: #f0f0f0;
+}
+
+.chat-area {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.chat-prompt {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    background-color: #1a1a1a;
+    border: 1px solid #2e2e2e;
+    border-radius: 20px;
+    padding: 4px 12px;
+    position: relative;
+    margin-top: auto;
+}
+
+.input-container input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 8px;
+}
+
+.input-container input::placeholder {
+    color: #777;
+}
+
+.send-btn {
+    background: transparent;
+    border: none;
+    color: #999;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 6px;
+    transition: color 0.3s;
+}
+
+.send-btn:hover {
+    color: #f0f0f0;
+}

@@ -1,58 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niyam AI - Legal Expert</title>
+    <title>JuriSight Chat</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
-    <header>
-        <div class="logo-container">
-            <span class="logo-icon">&#9776;</span>
-            <span class="logo-text">niyam.ai</span>
-        </div>
-        <div class="user-container">
-            <span class="user-icon">&#127769;</span>
-            <span class="user-icon">&#128100;</span>
-        </div>
-    </header>
 
-    <main>
-        <div class="main-content">
-            <h1>I'm Niyam, your legal expert, powered by AI.</h1>
-            <div class="search-container">
-                <div class="search-options">
-                    <span class="option active">Research</span>
-                    <span class="option pro">Judgements <span class="pro-tag">PRO</span></span>
-                    <span class="option pro">Document Intelligence <span class="pro-tag">PRO</span></span>
-                    <span class="option">Draft Response</span>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-toggle-btn">&#9776;</span>
+                <span class="app-title">JuriSight</span>
+            </div>
+
+            <nav class="sidebar-menu">
+                <a href="#" class="new-chat-btn">
+                    <span>+ New chat</span>
+                </a>
+            </nav>
+
+            <div class="projects-section">
+                <div class="section-title">Past Conversations</div>
+                <ul class="project-list">
+                    <li class="project-item active">Research on Contract Law</li>
+                    <li class="project-item">Drafting an NDA</li>
+                    <li class="project-item">Case Study Analysis</li>
+                    <li class="project-item">Summarize Recent Judgement</li>
+                    <li class="project-item">AI for Legal Research</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+                <a href="#" class="footer-item">
+                    <span>&#128100; Free Tier</span>
+                </a>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <div class="chat-title">JuriSight Chat</div>
+                <button class="upgrade-btn">
+                    <span>&#128142;</span> Upgrade to PRO
+                </button>
+                <div class="header-options">
+                    <span>&#9788;</span>
+                    <span>&#128100;</span>
                 </div>
-                <div class="input-area">
-                    <form action="#" method="get">
-                        <input type="text" placeholder="Start typing your query to start an in-depth research...">
-                    </form>
-                    <div class="prompt-library">
-                        <span class="library-text">Prompts Library</span>
-                        <span class="arrow-icon">&#8593;</span>
-                    </div>
+            </header>
+
+            <div class="chat-area">
+                <h1 class="chat-prompt">What legal query are you working on today?</h1>
+                <div class="input-container">
+                    <input type="text" placeholder="Type your legal question or command...">
+                    <button class="send-btn">
+                        <span>&#9658;</span>
+                    </button>
                 </div>
             </div>
-            <p class="disclaimer">Niyam.ai can make mistakes. Check important info</p>
-        </div>
-    </main>
-
-    <footer>
-        <nav class="footer-nav">
-            <a href="#">Plans</a>
-            <a href="#">Laws & Acts</a>
-            <a href="#">Latest Judgements</a>
-            <a href="#">Disclosure</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms and Conditions</a>
-            <a href="#">Cookie Policy</a>
-            <a href="#">Refunds Policy</a>
-        </nav>
-    </footer>
+        </main>
+    </div>
 </body>
+
 </html>

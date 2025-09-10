@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuriSight</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-toggle-btn">&#9776;</span>
+                <span class="app-title">JuriSight </span> </div>
+            <div class="sidebar-menu">
+                <button class="new-chat-btn">
+                    <span>&#9998;</span> New chat
+                </button>
+            </div>
+            <div class="projects-section">
+                <div class="section-title">
+                    Past Conversations  </div>
+                <div class="project-list">
+                    <!-- Past Conversation will come here  -->
+                </div>
+            </div>
+
+            <!-- Here should be profile -->
+            <!-- <div class="sidebar-footer">
+                <div class="footer-item">
+                    <span>&#9832;</span> Free Tier
+                </div>
+            </div> -->
+        </aside>
+
+        <main class="main-content">
+            
+           <div class="chat-area">
+        <div class="chat-area-content">
+            <h1 class="chat-prompt">What legal query are you working on today?</h1>
+        </div>
+        <div class="input-container">
+            <input type="text" placeholder="Type your legal question or command...">
+            <button class="send-btn">
+                <span>&#9658;</span>
+            </button>
+        </div>
+    </div>
+        </main>
+    </div>
+</body>
+</html>
