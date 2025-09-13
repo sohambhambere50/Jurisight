@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JuriSight</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </head>
 
 <body>
     <div class="app-container">
-
         <aside class="sidebar">
             <div class="sidebar-header">
                 <span class="sidebar-toggle-btn">&#9776;</span>
@@ -30,25 +30,35 @@
             </div>
 
             <!-- Here should be profile -->
-            <!-- <div class="sidebar-footer">
+            <div class="sidebar-footer">
                 <div class="footer-item">
                     <span>&#9832;</span> Free Tier
                 </div>
-            </div> -->
+            </div>
         </aside>
 
         <main class="main-content">
+            <div class="chat-log">
+                <div class="chat-message bot-message">
+                    <div class="message-content">
+                        <p>Hello! How can I help with your legal research today?</p>
+                    </div>
+                </div>
 
-            <div class="chat-area">
-                <div class="chat-area-content">
-                    <h1 class="chat-prompt">What legal query are you working on today?</h1>
+                <div class="chat-message user-message">
+                    <div class="message-content">
+                        <p>How can we define and write body of method in interface in Java</p>
+                    </div>
                 </div>
-                <div class="input-container">
-                    <input type="text" placeholder="Type your legal question or command...">
-                    <button class="send-btn">
-                        <span>&#9658;</span>
-                    </button>
-                </div>
+            </div>
+
+            <div class="input-container">
+                <label for="file-upload" class="plus-btn">+</label>
+                <input id="file-upload" type="file" multiple style="display: none;" />
+                <input type="text" id="user-input" placeholder="Type your legal question or command...">
+                <button id="send-btn" class="send-btn">
+                    <span>&#9658;</span>
+                </button>
             </div>
         </main>
     </div>

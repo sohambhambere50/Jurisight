@@ -206,7 +206,7 @@ body {
 }
 
 .app-title {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     color: #e0e0e0; /* Consistent app title color */
 }
@@ -852,6 +852,7 @@ body {
     padding: 4px 12px;
     position: relative;
     margin-top: auto;
+    margin-bottom: 30px;
 }
 
 .input-container input {
@@ -868,6 +869,31 @@ body {
     color: #777;
 }
 
+.plus-btn {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #999;
+    cursor: pointer;
+    padding: 0 10px;
+    user-select: none;
+}
+
+.plus-btn:hover {
+    color: #f0f0f0;
+}
+
+/* Ensure the text input takes up the remaining space */
+.input-container #user-input {
+    flex-grow: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 0.9em;
+    padding: 8px;
+}
+
+
 .send-btn {
     background: transparent;
     border: none;
@@ -880,4 +906,76 @@ body {
 
 .send-btn:hover {
     color: #f0f0f0;
+}
+
+/* --- Styles for the dynamic chat messages --- */
+
+.chat-log {
+    flex-grow: 1;
+    padding: 10px 80px; /* Add horizontal padding to prevent messages from touching the edges */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #121212;
+}
+
+.chat-message {
+    display: flex;
+    width: 100%;
+}
+
+.bot-message {
+    justify-content: flex-start;
+}
+
+.user-message {
+    justify-content: flex-end;
+}
+
+.message-content {
+    max-width: 90%;
+    padding: 12px 9px;
+    border-radius: 15px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.bot-message .message-content {
+    /* background-color: #2e2e2e; */
+    color: #f0f0f0;
+    border-top-left-radius: 5px; /* Square off the corner closest to the sidebar */
+}
+
+.user-message .message-content {
+    /* background-color: #7289da; */
+    background-color: #2e2e2e;
+    color: #ffffff;
+    border-bottom-right-radius: 5px; /* Square off the corner for a cleaner look */
+}
+
+.message-content p {
+    margin: 0;
+}
+
+/* Specific styling for the greeting */
+.message-content .greeting {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* General text formatting within the message bubble */
+.message-content b {
+    color: #ffc107; /* Highlight bold text with a distinct color */
+}
+
+/* Ensure the input container stays at the bottom */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.input-container {
+    margin-top: auto;
 }
