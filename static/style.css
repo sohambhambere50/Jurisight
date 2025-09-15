@@ -939,6 +939,8 @@ body {
     border-radius: 15px;
     font-size: 0.95em;
     line-height: 1.5;
+     text-align: left;   /* Force left alignment */
+    white-space: pre-wrap; /* Preserve line breaks */
 }
 
 .bot-message .message-content {

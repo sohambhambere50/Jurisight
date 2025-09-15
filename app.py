@@ -30,12 +30,12 @@ def home():
     # Renders the main page of the application.
     return render_template('login.html')
 
-# Database creation for Login and Signup page
+# # Database creation for Login and Signup page
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = os.getenv("SECRET_KEY")  #need to create the secret key
 
-# Mail config (example with Gmail SMTP). Replace with env vars in production
+# # Mail config (example with Gmail SMTP). Replace with env vars in production
 MAIL_SERVER = os.getenv('MAIL_SERVER', 'smtp.gmail.com')
 MAIL_PORT = int(os.getenv('MAIL_PORT', 587))
 MAIL_USE_TLS = os.getenv('MAIL_USE_TLS', 'True').lower() in ('true','1','t')
@@ -43,9 +43,10 @@ MAIL_USERNAME = os.getenv('MAIL_USERNAME')
 MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
 MAIL_DEFAULT_SENDER = os.getenv('MAIL_DEFAULT_SENDER', os.getenv('MAIL_USERNAME'))
 
-print("MAIL_USERNAME =", MAIL_USERNAME)
-print("MAIL_SERVER =", MAIL_SERVER)
-print("MAIL_PORT =", MAIL_PORT)
+# # To test the email configuration is working correctly or not 
+# print("MAIL_USERNAME =", MAIL_USERNAME)
+# print("MAIL_SERVER =", MAIL_SERVER)
+# print("MAIL_PORT =", MAIL_PORT)
 
 mail.init_app(app) #Initialization of mail 
 
@@ -57,7 +58,7 @@ db.init_app(app) #Initialization of User database
 with app.app_context():
     db.create_all()
 
-# Route for Signup page
+# Route for signup.html page
 @app.route('/signup', methods=['GET','POST'])
 def signup():
     print("Signup page is running with:", request.method)
@@ -100,7 +101,7 @@ def signup():
 
     return render_template('signup.html')
 
-# Routes for login
+# Routes for login.html page
 @app.route('/login', methods=['GET','POST'])
 def login():
     if request.method == 'POST':
@@ -123,10 +124,12 @@ def login():
 def verify():
     return render_template('verify.html')
 
+# Route to open chatbot.html page
 @app.route('/chatbot',methods=['GET'])
 def chatbot_page():
     return render_template("chatbot.html")
 
+# Route to process the user query
 @app.route('/chatbot', methods=['POST'])
 def chatbot_api():
     user_message = request.form.get("user_message","").strip()
@@ -146,8 +149,6 @@ def chatbot_api():
     reply = answer_query(user_message, document_text if document_text else None)
     return jsonify({"reply" : reply})
     
-
-
 # def allowed_file(filename):
 #     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
 

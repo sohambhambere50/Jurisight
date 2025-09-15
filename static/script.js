@@ -142,12 +142,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to add messages to chat log
     function addMessage(message, isUser = false) {
+        if (!message) message = "";  // safeguard if backend sends empty
+
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('chat-message', isUser ? 'user-message' : 'bot-message');
 
         const contentDiv = document.createElement('div');
         contentDiv.classList.add('message-content');
-        contentDiv.innerHTML = `<p>${message}</p>`;
+        
+         // ✅ convert newlines safely
+        const formattedMessage = String(message).replace(/\n/g, "<br>");
+        contentDiv.innerHTML = `<p>${formattedMessage}</p>`;
 
         messageDiv.appendChild(contentDiv);
         chatLog.appendChild(messageDiv);
