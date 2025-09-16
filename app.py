@@ -28,6 +28,10 @@ def allowed_file(filename):
 @app.route('/', methods=["GET", "POST"])
 def home():
     # Renders the main page of the application.
+    return render_template('landing_page.html')
+
+@app.route('/index.html', methods=['GET','POST'])
+def index():
     return render_template('index.html')
 
 # # Database creation for Login and Signup page
@@ -125,8 +129,8 @@ def verify():
     return render_template('verify.html')
 
 # Route to open chatbot.html page
-@app.route('/chatbot',methods=['GET'])
-def chatbot_page():
+@app.route('/Chatbot',methods=['GET'])
+def Chatbot():
     return render_template("chatbot.html")
 
 # Route to process the user query
