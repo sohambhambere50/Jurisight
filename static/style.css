@@ -256,6 +256,8 @@ body {
     flex-grow: 1;
     overflow-y: auto;
     padding-right: 10px; /* For scrollbar space */
+    background-color: #000;
+    color: #2a2a2a;
 }
 
 .section-title {
@@ -318,7 +320,7 @@ body {
 .main-header {
     display: flex;
     justify-content: flex-end; /* Align items to the right */
-    align-items: center;
+    
     gap: 20px;
     padding: 10px 0;
     border-bottom: 1px solid #2e2e2e; /* Subtle header border */
@@ -980,4 +982,259 @@ body {
 
 .input-container {
     margin-top: auto;
+}
+
+/* --- Custom Scrollbar Styles for Webkit browsers (Chrome, Safari, etc.) --- */
+
+/* This targets the entire scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the vertical scrollbar */
+}
+
+/* This targets the scrollbar track (the background) */
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Dark background color for the track */
+    border-radius: 5px; /* Rounded corners for a smoother look */
+}
+
+/* This targets the scrollbar handle (the part you drag) */
+::-webkit-scrollbar-thumb {
+    background-color: #555; /* Color of the scrollbar handle */
+    border-radius: 5px; /* Rounded corners for the handle */
+    border: 2px solid #1a1a1a; /* Adds a small border to separate the handle from the track */
+}
+
+/* Style the handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Lighter color on hover */
+}
+
+/* --- You may also need to apply this to specific containers that scroll --- */
+/* For example, your chat log and sidebar */
+.chat-log, .projects-section {
+    scrollbar-width: thin; /* Firefox scrollbar property */
+    scrollbar-color: #555 #1a1a1a; /* Firefox scrollbar color (thumb track) */
+}
+
+/* Landing page */
+
+/* --- Landing Page Styles --- */
+.landing-page {
+    background-color: #0b0c11; /* Dark background */
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #121212;
+    border-bottom: 1px solid #2e2e2e;
+}
+
+.logo-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #999;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn, .signup-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-btn {
+    color: #fff;
+    border: 1px solid #7289da;
+}
+
+.login-btn:hover {
+    background-color: rgba(114, 137, 218, 0.1);
+}
+
+.signup-btn {
+    background-color: #7289da;
+    color: #fff;
+}
+
+.signup-btn:hover {
+    background-color: #677bc4;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #7289da, #c685d8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.2em;
+    color: #999;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.cta-btn {
+    background-color: #7289da;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #677bc4;
+}
+
+/* --- Footer --- */
+.main-footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #121212;
+    border-top: 1px solid #2e2e2e;
+}
+
+.footer-text {
+    font-size: 0.8em;
+    color: #666;
+}
+
+/* --- New Navbar Styles --- */
+
+/* Parent container for the header to control layout */
+.new-main-header {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0b0c11; /* Same as body to blend in */
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Wrapper to group nav links and auth buttons */
+.nav-links-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Space between the menu and auth buttons */
+}
+
+/* Navigation menu items */
+.nav-menu {
+    display: flex;
+    gap: 25px; /* Space between each nav link */
+}
+
+.nav-item {
+    color: #999;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-item:hover {
+    color: #fff;
+}
+
+/* A simple underline effect on hover */
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #7289da;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+/* Authentication buttons group */
+.auth-buttons-group {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn {
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    border: 1px solid #7289da;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: rgba(114, 137, 218, 0.1);
+}
+
+.signup-btn {
+    background-color: #7289da;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: #677bc4;
 }

@@ -28,7 +28,7 @@ def allowed_file(filename):
 @app.route('/', methods=["GET", "POST"])
 def home():
     # Renders the main page of the application.
-    return render_template('login.html')
+    return render_template('index.html')
 
 # # Database creation for Login and Signup page
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
@@ -62,7 +62,7 @@ with app.app_context():
 @app.route('/signup', methods=['GET','POST'])
 def signup():
     print("Signup page is running with:", request.method)
-    if request.method == 'GET':        
+    if request.method == 'POST':        
         username = request.form.get('username', '').strip()
         email = request.form.get('email', '').strip()
         password = request.form.get('password', '')
@@ -95,8 +95,8 @@ def signup():
         session['pending_user_id'] = new_user.id
 
         flash("Signup successful! A verification code has been sent to email. Please verify.")
-        return redirect(url_for('verify'))
-        # return redirect(url_for('login'))
+        # return redirect(url_for('verify'))
+        return redirect(url_for('login'))
 
 
     return render_template('signup.html')

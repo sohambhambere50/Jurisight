@@ -1,14 +1,39 @@
-<!-- {% extends "base.html" %}
-{% block content %}
-<h2>Upload Legal Document or Enter Text</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JuriSight - Your AI Legal Expert</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="landing-page">
+    <header class="main-header">
+        <div class="logo">
+            <span class="logo-text">JuriSight</span>
+        </div>
+        <div class="nav-links-wrapper">
+            <nav class="nav-menu">
+                <a href="#" class="nav-item">Features</a>
+                <a href="#" class="nav-item">Pricing</a>
+                <a href="#" class="nav-item">Contact</a>
+            </nav>
+            <div class="auth-buttons-group">
+                <a href="{{ url_for('login') }}" class="login-btn">Log in</a>
+                <a href="{{ url_for('signup') }}" class="signup-btn">Sign up</a>
+            </div>
+        </div>
+    </header>
 
-<form action="/" method="POST" enctype="multipart/form-data">
-    <label>Upload File:</label>
-    <input type="file" name="file" accept=".pdf,.docx"><br><br>
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Your Legal Expert, Powered by AI.</h1>
+            <p class="hero-subtitle">
+                Streamline legal research, automate document analysis, and get instant answers with JuriSight.
+            </p>
+            <a href="{{ url_for('chatbot') }}" class="cta-btn">Start a new conversation</a>
+        </div>
+    </main>
 
-    <label>Or Enter Text:</label><br>
-    <textarea name="user_prompt" rows="6" cols="60" placeholder="Paste your legal text here..."></textarea><br><br>
-
-    <button type="submit">Analyze</button>
-</form>
-{% endblock %} -->
+    
+</body>
+</html>
